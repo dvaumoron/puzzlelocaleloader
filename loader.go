@@ -27,6 +27,7 @@ import (
 
 var errNoLocale = errors.New("no locales declared")
 
+// TODO use PasswordStrengthService.GetRules
 func Load(localesPath string, allLang []string) (map[string]map[string]string, error) {
 	if len(allLang) == 0 {
 		return nil, errNoLocale
